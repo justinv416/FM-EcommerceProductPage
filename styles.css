@@ -44,6 +44,19 @@ a {
     font-weight: 400;
     margin-left: 40px;
     color: var(--nav-links_color);
+    transition: background-color 0.2s ease-in-out;
+    position: relative;
+}
+
+.nav-main_links:hover::after {
+    content: "";
+    position: absolute;
+    background-color: hsl(26, 100%, 55%);
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    animation: linkGrow 0.4s forwards;
 }
 
 .nav-main_profile {
@@ -68,4 +81,12 @@ a {
     position: absolute;
     bottom: 0;
     z-index: 1;
+}
+
+@keyframes linkGrow {
+    from {
+        width: 0%;
+    } to {
+        width: 100%;
+    }
 }
