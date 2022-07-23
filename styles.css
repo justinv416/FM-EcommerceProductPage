@@ -13,9 +13,31 @@ li {
 }
 
 .nav-main {
+    position: relative;
     margin: 0 auto;
     width: 90%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+    padding: 30px 0;
+}
+
+.nav-main_list {
+    display: flex;
+}
+
+.nav-main_profile {
+    display: flex;
+    align-items: center;
+}
+
+.nav-main::after {
+    content: "";
+    background-color: rgb(0, 0, 0);
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
 }
